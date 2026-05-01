@@ -8,7 +8,7 @@
     - Main Content
 
 - Footer
-    - Footer NavBar
-    - Banner
+    - FooterBanner
+    - FooterLinks
     - SocialBar
 
