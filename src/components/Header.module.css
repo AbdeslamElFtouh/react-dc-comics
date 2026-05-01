@@ -1,0 +1,30 @@
+.headerContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLogo img {
+    width: 50%;
+}
+
+.headerMenu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.headerMenu a {
+    text-decoration: none;
+    color: #5d5d5d;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.active {
+    color: #1e88e5;
+    border-bottom: 6px solid #1e88e5;
+    padding-bottom: 33px;
+}

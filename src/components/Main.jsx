@@ -1,4 +1,5 @@
 import styles from './Main.module.css';
+
 function Main() {
     return (
         <main className={styles.mainContainer}>
