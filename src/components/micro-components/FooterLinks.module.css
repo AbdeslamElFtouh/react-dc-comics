@@ -1,0 +1,37 @@
+.footerLinks {
+    color: white;
+    padding: 20px 0;
+    background-image: url('/img/footer-bg.jpg');
+    background-size: cover;
+}
+
+.footerLinksContainer {
+    padding: 0 150px;
+    display: flex;
+    gap: 60px;
+}
+
+.footerLinksTitle {
+    font-size: 1.2rem;
+}
+
+.footerLinksList {
+    list-style: none;
+    padding: 0;
+    line-height: 25px;
+}
+
+
+.footerLinksList a {
+    text-decoration: none;
+    color: #b7b7b7;
+    font-size: 13px;
+}
+
+.footerLinksList a:hover {
+    color: white;
+}
+
+.logoBgFooter {
+    width: 100%;
+}
