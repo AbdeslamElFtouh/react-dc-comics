@@ -1,26 +1,43 @@
 import style from './Header.module.css';
+import { links } from '../data/header_links.js';
 
+
+function render_links(links) {
+    return links.map(link => {
+        const { id, name, active } = link;
+        if (active === false) {
+            return (
+                <li key={id} className={style.active}>
+                    <a href="#">{name}</a>
+                </li>
+            );
+        } else {
+            return (
+                <li key={id}>
+                    <a href="#">{name}</a>
+                </li>
+            )
+        };
+    });
+}
 function Header() {
+
+    const links_jsx = render_links(links);
+
     return (
         <header>
             <nav className={style.headerContainer}>
+
                 {/* Icona NavBar */}
                 <div className={style.headerLogo}>
                     <img src="/img/dc-logo.png" alt="DC Comics logo" />
                 </div>
+
                 {/* Menu NavBar */}
                 <ul className={style.headerMenu}>
-                    <li><a href="#">CHARACTERS</a></li>
-                    <li><a href="#" className={style.active}>COMICS</a></li>
-                    <li><a href="#">MOVIES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">GAMES</a></li>
-                    <li><a href="#">COLLECTIBLES</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">FANS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">SHOP</a></li>
+                    {links_jsx}
                 </ul>
+
             </nav>
         </header>
     );
