@@ -57,7 +57,7 @@
     padding-bottom: 20px;
 }
 
-.btn {
+.btn_container button {
     font-weight: 800;
     color: white;
     background: #1e88e5;
@@ -67,6 +67,6 @@
     transition: background 0.3s;
 }
 
-.btn:hover {
+.btn_container button:hover {
     background: #0066c4;
 }

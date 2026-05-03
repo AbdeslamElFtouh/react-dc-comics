@@ -29,7 +29,7 @@ function Main() {
                 </div>
 
                 <div className={style.btn_container}>
-                    <button className={style.btn}>LOAD MORE</button>
+                    <button>LOAD MORE</button>
                 </div>
             </section>
         </main>
