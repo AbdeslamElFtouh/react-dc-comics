@@ -1,14 +1,13 @@
 .footerBanner {
     background-color: #0282f9;
-    padding: 35px 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerBannerContainer {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .footerBannerItem {
@@ -18,6 +17,7 @@
     color: white;
     font-weight: 400;
     font-size: 0.8rem;
+    padding: 0 15px;
 }
 
 .footerBannerIcon {
