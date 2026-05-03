@@ -8,12 +8,13 @@
 
 .footerBannerContainer {
     display: flex;
+    gap: 10px;
 }
 
 .footerBannerItem {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     color: white;
     font-weight: 400;
     font-size: 0.8rem;
@@ -21,7 +22,7 @@
 }
 
 .footerBannerIcon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
