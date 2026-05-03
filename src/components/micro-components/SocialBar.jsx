@@ -3,9 +3,9 @@ import { socials } from '../../data/footer_socials.js';
 
 function render_socials_icons(socials) {
     return socials.map((social) => {
-        const { src, alt } = social;
+        const { src, alt, id } = social;
         return (
-            <a href="#" className={style.footerSocialIcon} aria-label={alt}>
+            <a href="#" key={id} className={style.footerSocialIcon} aria-label={alt} >
                 <img src={src} alt={alt} />
             </a>
         )

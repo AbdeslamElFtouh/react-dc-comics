@@ -1,10 +1,72 @@
-.mainContainer {
-    background-color: black;
-    color: white;
-    padding-left: 150px;
-    line-height: 100px;
+.heroes {
+    height: 280px;
+    overflow: hidden;
 }
 
-.content {
-    margin: 0;
+.heroes img {
+    width: 100%;
+}
+
+.series {
+    /* position: relative; */
+    background-color: rgb(44, 44, 44);
+    padding: 0 200px;
+}   
+
+.section_title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    background: #1e88e5;
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: -22px;
+    margin-bottom: 20px;
+}
+
+.series_container {
+    /* METODO per creare griglie responsive senza usare classi Bootstrap: */
+    display: grid;
+    /* Crea 6 colonne identiche, che occupano 1 'fraction', quindi ogni colonna occuperà lo stesso spazio */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.20);
+}
+
+.card h3 {
+    font-size: 0.6rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* BOTTONE */
+.btn_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    font-weight: 800;
+    color: white;
+    background: #1e88e5;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0066c4;
 }
