@@ -1,6 +1,21 @@
 import style from './SocialBar.module.css'
+import { socials } from '../../data/footer_socials.js';
+
+function render_socials_icons(socials) {
+    return socials.map((social) => {
+        const { src, alt } = social;
+        return (
+            <a href="#" className={style.footerSocialIcon} aria-label={alt}>
+                <img src={src} alt={alt} />
+            </a>
+        )
+    });
+}
 
 function SocialBar() {
+
+    let social_icons = render_socials_icons(socials);
+
     return (
         <section className={style.footerSocial}>
             <div className={style.footerSocialContainer}>
@@ -9,25 +24,7 @@ function SocialBar() {
                 <div className={style.footerSocialChannels}>
                     <h3 className={style.footerSocialTitle}>FOLLOW US</h3>
 
-                    <a href="#" className={style.footerSocialIcon} aria-label="Facebook">
-                        <img src="/img/footer-facebook.png" alt="Facebook" />
-                    </a>
-
-                    <a href="#" className={style.footerSocialIcon} aria-label="Twitter">
-                        <img src="/img/footer-twitter.png" alt="Twitter" />
-                    </a>
-
-                    <a href="#" className={style.footerSocialIcon} aria-label="YouTube">
-                        <img src="/img/footer-youtube.png" alt="YouTube" />
-                    </a>
-
-                    <a href="#" className={style.footerSocialIcon} aria-label="Pinterest">
-                        <img src="/img/footer-pinterest.png" alt="Pinterest" />
-                    </a>
-
-                    <a href="#" className={style.footerSocialIcon} aria-label="Location">
-                        <img src="/img/footer-periscope.png" alt="Location" />
-                    </a>
+                    {social_icons}
                 </div>
             </div>
         </section>
