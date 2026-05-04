@@ -1,9 +1,7 @@
 import style from './Main.module.css';
-import comics from '../data/comics.js';
 
 function render_heroes_cards(cards) {
-    return (cards.map((card) => {
-        const { series, thumb, id } = card;
+    return (cards.map(({ series, thumb, id }) => {
         return (
             <div key={id} className={style.card}>
                 <img src={thumb} alt={series}/>
@@ -12,7 +10,7 @@ function render_heroes_cards(cards) {
         );
     }))
 };
-function Main() {
+function Main({ comics }) {
     let heroes_cards = render_heroes_cards(comics);
 
     return (
