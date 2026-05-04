@@ -1,9 +1,7 @@
 import style from './FooterBanner.module.css';
-import { lista_banner_items } from '../../data/footer_banner.js';
 
 function render_banner_items(items) {
-    return (items.map((item) => {
-        const { src, text, id } = item;
+    return (items.map(({ src, text, id }) => {
         return (
             <div key={id} className={style.footerBannerItem}>
                 <img src={src} alt={text.toLowerCase()} className={style.footerBannerIcon} />
@@ -13,7 +11,7 @@ function render_banner_items(items) {
     }))
 };
 
-function FooterBanner() {
+function FooterBanner({ lista_banner_items }) {
 
     let banner_items = render_banner_items(lista_banner_items);
 
