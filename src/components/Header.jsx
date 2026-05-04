@@ -1,27 +1,17 @@
 import style from './Header.module.css';
-import { links } from '../data/header_links.js';
-
 
 function render_links(links) {
-    return links.map(link => {
-        const { id, name, active } = link;
-        if (active === false) {
-            return (
-                <li key={id} className={style.active}>
-                    <a href="#">{name}</a>
-                </li>
-            );
-        } else {
+    return links.map(({ id, name }) => {
+        
             return (
                 <li key={id}>
                     <a href="#">{name}</a>
                 </li>
-            )
-        };
-    });
+            );
+        }
+    );
 }
-function Header() {
-
+function Header({links}) {
     const links_jsx = render_links(links);
 
     return (
